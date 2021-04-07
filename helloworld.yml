@@ -6,3 +6,7 @@
  
   - name: Hello World!
     shell: echo "Hi! Tower is working."
+  - name: enable-telnet
+    ansible.windows.win_feature:
+      name: Telnet-Client
+      state: present

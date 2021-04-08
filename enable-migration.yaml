@@ -1,0 +1,7 @@
+---
+- name: enable migration
+  hosts: all
+  tasks:
+  - name: Run multi-lined shell commands
+    ansible.windows.win_shell: |
+      Add-WindowsFeature MIgration

@@ -1,0 +1,10 @@
+---
+- name: invoke-request
+  hosts: all
+  
+  tasks:
+  - name: Invoke-RestMethod via shell module
+    shell: Invoke-RestMethod -Uri 'https://httpbin.org/get' | ConvertTo-Json
+    args:
+      executable: /usr/bin/pwsh
+    register: apiRequest

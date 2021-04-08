@@ -7,9 +7,4 @@
     ansible.windows.win_feature:
       name: Telnet-Client
       state: present
-- name: enable migration
-  hosts: all
-  tasks:
-  - name: Run multi-lined shell commands
-    ansible.windows.win_shell: |
-      Add-WindowsFeature MIgration
+

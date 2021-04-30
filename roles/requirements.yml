@@ -1,3 +1,4 @@
 # from galaxy
-- src: ansible.windows
 - src: yatesr.timezone
+- src: ansible.windows
+

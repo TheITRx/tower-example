@@ -1,4 +1,6 @@
 # from galaxy
+---
+collections:
 - src: yatesr.timezone
-#- src: ansible.windows
+  src: ansible.windows
 

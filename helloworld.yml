@@ -3,8 +3,8 @@
   hosts: all
  
   tasks:
-  - name: enable-telnetx1
-    ansible.windows.win_feature:
-      name: Telnet-Client
-      state: present
+  - name: Restart a service
+    ansible.windows.win_service:
+      name: spooler
+      state: restarted
 

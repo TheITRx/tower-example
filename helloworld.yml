@@ -3,10 +3,6 @@
   hosts: all
  
   tasks:
-  - name: Restart a service
-    ansible.windows.win_service:
-      name: spooler
-      state: restarted
       
   - name: Execute a command in the remote shell, stdout goes to the specified file on the remote
     ansible.builtin.win_shell: |

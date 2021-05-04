@@ -1,3 +1,7 @@
 ---
-- name: Example from an Ansible Playbook
-  ansible.windows.win_ping:
+- name: sample shell cmd
+  hosts: all
+
+  tasks:
+  - name: Example from an Ansible Playbook
+    ansible.windows.win_ping:

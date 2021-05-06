@@ -6,4 +6,4 @@
     - name: install on telnet client
       ansible.windows.win_feature:
         name: telnet-client
-        state: present 
+        state: absent 

@@ -4,6 +4,14 @@
 
   tasks:
 
-  - name: This command will change the working directory to somedir/
+  - name: get resolv
     ansible.builtin.shell:
       cmd: cat /etc/resolv.conf
+      
+  - name: This command will change the working directory to somedir/
+    ansible.builtin.shell:
+      cmd: cat /etc/krb5.conf
+      
+  - name: 
+    ansible.builtin.shell:
+      cmd: ip a

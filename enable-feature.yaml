@@ -1,5 +1,6 @@
 ---
 - name: tests on windows features
+  gather_facts: true
   hosts: all
   
   tasks:

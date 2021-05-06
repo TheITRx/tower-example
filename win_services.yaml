@@ -5,8 +5,9 @@
    svc_name: spooler
 
   tasks:
+    
   - name: restart services
-    ansible.windows.win_sevice:
+    ansible.windows.win_service:
      name: "{{ svc_name }}"
      state: restarted
     #register:

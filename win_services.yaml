@@ -10,4 +10,4 @@
     ansible.windows.win_service:
      name: "{{ svc_name }}"
      state: restarted
-    #register:
+    register: restart_svc_out

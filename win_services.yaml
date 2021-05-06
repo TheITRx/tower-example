@@ -1,0 +1,11 @@
+---
+- name: restart services
+  hosts: all
+  vars:
+   svc_name: spooler
+
+  tasks:
+  - name: restart services
+    ansible.windows.win_sevice:
+     name: "{{ svc_name }}"
+     state: rstarted

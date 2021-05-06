@@ -8,7 +8,7 @@
     ansible.builtin.shell:
       cmd: cat /etc/resolv.conf
       
-  - name: This command will change the working directory to somedir/
+  - name: krb5
     ansible.builtin.shell:
       cmd: cat /etc/krb5.conf
       

@@ -8,4 +8,5 @@
   - name: restart services
     ansible.windows.win_sevice:
      name: "{{ svc_name }}"
-     state: rstarted
+     state: restarted
+    #register:

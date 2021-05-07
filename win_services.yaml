@@ -14,4 +14,4 @@
     ansible.windows.win_service:
      name: "{{ svc_name }}"
      state: restarted
-    loop "{{ svc_names }}"
+    loop: "{{ svc_names }}"

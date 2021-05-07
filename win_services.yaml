@@ -3,6 +3,10 @@
   hosts: all
   vars:
    svc_name: spooler
+   svc_names:
+   - spooler
+   - winrm
+   - vss
 
   tasks:
     
@@ -10,4 +14,4 @@
     ansible.windows.win_service:
      name: "{{ svc_name }}"
      state: restarted
-    register: restart_svc_out
+    loop "{{ svc_names }}"

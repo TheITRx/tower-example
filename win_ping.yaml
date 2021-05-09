@@ -1,6 +1,7 @@
 ---
 - name: sample shell cmd
   hosts: all
+  gather_facts: true
 
   tasks:
   - name: Example from an Ansible Playbook

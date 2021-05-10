@@ -1,6 +1,7 @@
 ---
 - name: restart services
   hosts: all
+  gather_facts: yes
   vars:
    svc_name: spooler
    svc_names:

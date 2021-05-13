@@ -13,6 +13,6 @@
     
   - name: trying loops - restart services
     ansible.windows.win_service:
-     name: "{{ item }}"
+     name: "{{ svc_name }}"
      state: restarted
     loop: "{{ svc_names }}"

@@ -30,3 +30,20 @@
      name: spooler
      state: stopped
     when: spooler_status.state == 'running'
+  # end of trying when
+
+  - name: will use this for handlers
+    ansible.windows.win_service
+      name: spooler
+      state: restarted
+    notify: write to file
+  # trying handlers
+
+  handlers:
+  - name: write to file
+    ansible.windows.win_shell: |
+      $result = get-service spooler | convertTO-json -depth 2
+      $result | out-file c:\temp\ah.json
+      $result
+
+

@@ -19,7 +19,7 @@
 
   # trying when
   - name: trying when
-    ansible.windows.win_service
+    ansible.windows.win_service:
      name: spooler
     register: spooler_status
     

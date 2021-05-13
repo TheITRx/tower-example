@@ -32,6 +32,28 @@
     when: spooler_status.state == 'running'
   # end of trying when
 
+  # trying blocks
+
+  - name: try blocks
+    blocks:
+    
+      - name: fail restart a service
+        ansible.windows.win_service
+          name: spoolerssss
+          state: restarted
+
+    resue:
+      - name: restart actually the spooler
+        ansible.windows.win_service:
+          name: spooler
+          state: restarted
+    always:
+      - name: zuup
+        msg: wazzup dawg
+
+
+  # end of trying blocks
+
   - name: will use this for handlers
     ansible.windows.win_service:
       name: spooler

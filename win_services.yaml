@@ -25,4 +25,4 @@
 
   - name: stop spooler when running
     ansible.builtin.shell:
-     cmd: echo spooler_status
+     cmd: echo {{ spooler_status.stdout }}

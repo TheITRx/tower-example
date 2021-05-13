@@ -38,7 +38,7 @@
     blocks:
     
       - name: fail restart a service
-        ansible.windows.win_service
+        ansible.windows.win_service:
           name: spoolerssss
           state: restarted
 

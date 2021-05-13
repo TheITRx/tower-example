@@ -24,3 +24,9 @@
     register: spooler_status
 
   - debug: msg="{{ spooler_status }}"
+
+  - name: stopped when spooler is running
+    ansible.windows.win_service:
+     name: spooler
+     state: stopped
+    when: spooler_status.state == running

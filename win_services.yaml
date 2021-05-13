@@ -11,8 +11,8 @@
 
   tasks:
     
-  - name: restart services
+  - name: trying loops - restart services
     ansible.windows.win_service:
-     name: "{{ svc_name }}"
+     name: "{{ item }}"
      state: restarted
     loop: "{{ svc_names }}"

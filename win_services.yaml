@@ -49,7 +49,8 @@
           state: restarted
     always:
       - name: zuup
-        msg: wazzup dawg
+        ansible.builtin.debug:
+          msg: wazzup dawg
 
 
   # end of trying blocks

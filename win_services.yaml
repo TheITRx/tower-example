@@ -10,9 +10,16 @@
    - vss
 
   tasks:
-    
+  # trying loops
   - name: trying loops - restart services
     ansible.windows.win_service:
      name: "{{ item }}"
      state: restarted
     loop: "{{ svc_names }}"
+
+  # trying when
+  - name: trying when
+    ansible.windows.win_service
+     name: spooler
+    register: spooler_status
+    

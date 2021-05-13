@@ -6,7 +6,7 @@
    svc_name: spooler
    svc_names:
    - spooler
-   - winrm
+   - wuauserv
    - vss
 
   tasks:

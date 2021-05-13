@@ -42,7 +42,7 @@
           name: spoolerssss
           state: restarted
 
-    resue:
+    rescue:
       - name: restart actually the spooler
         ansible.windows.win_service:
           name: spooler

@@ -23,4 +23,4 @@
      name: spooler
     register: spooler_status
 
-  - debug: msg="{{ spooler_status.stdout }}"
+  - debug: msg="{{ spooler_status }}"

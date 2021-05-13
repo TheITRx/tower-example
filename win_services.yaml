@@ -33,7 +33,7 @@
   # end of trying when
 
   - name: will use this for handlers
-    ansible.windows.win_service
+    ansible.windows.win_service:
       name: spooler
       state: restarted
     notify: write to file

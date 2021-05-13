@@ -22,4 +22,10 @@
     ansible.windows.win_service:
      name: spooler
     register: spooler_status
+
+  - name: stop spooler when running
+    ansible.windows.win_service:
+     name: spooler
+     state: stopped
+    when: spooler_status.stdout.state == running
     

@@ -1,3 +1,6 @@
 ---
+# you need to think throug if a collection is worth to be here or to just be installed straight to the awx-ee (environment executiner)
+
+
 - src: geerlingguy.redis
 - src: azure.azure_modules

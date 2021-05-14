@@ -1,6 +1,4 @@
-# from galaxy
 ---
-collections:
-- yatesr.timezone
-- ansible.windows
-- community.vmware
+- src: geerlingguy.redis
+
+- src: ansible.windows

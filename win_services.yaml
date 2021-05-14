@@ -11,6 +11,13 @@
 
   tasks:
 
+  # tring lookup 
+  - name: this is a lookup
+    debug:
+      msg: "{{ lookup('dig', 'enjoyjocel.com.','qtype=A')}}"
+      
+    
+
 # working on templates
   - name: copying a template
     ansible.builtin.template:

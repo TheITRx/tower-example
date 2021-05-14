@@ -12,6 +12,10 @@
     ansible.builtin.shell:
       cmd: cat /etc/krb5.conf
       
-  - name: 
+  - name: ipconfig
     ansible.builtin.shell:
       cmd: ip a
+
+  - name: check ansible-galaxy
+    ansible.builtin.shell:
+      cmd: ansible-galaxy collection list

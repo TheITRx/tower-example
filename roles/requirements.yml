@@ -1,2 +1,3 @@
 ---
 - src: geerlingguy.redis
+- src: azure.azure_modules

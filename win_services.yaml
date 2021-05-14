@@ -10,12 +10,12 @@
    - vss
 
   tasks:
-  - name: copy a template
+
+# working on templates
+  - name: copying a template
     ansible.builtin.template:
       src: random_text.j2
       dest: c:\temp\random_text.txt
-
-
 
   # trying loops
   - name: trying loops - restart services

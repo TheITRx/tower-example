@@ -1,6 +1,6 @@
 ---
 - name:
-  hosts: this_hosts
+  hosts: {{ host_name }}
 
   tasks:
     - name: checking vars

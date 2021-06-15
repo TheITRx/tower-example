@@ -1,6 +1,6 @@
 ---
 - name:
-  hosts: this_hosts
+  connection: local
 
   tasks:
 

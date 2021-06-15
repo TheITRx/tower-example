@@ -1,0 +1,9 @@
+---
+- name:
+  hosts: all
+
+  tasks:
+    - name: restart spooler
+      ansible.windows.win_service:
+        name: spooler
+        state: restarted

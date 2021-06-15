@@ -1,14 +1,18 @@
 ---
 - name:
-  hosts: all
 
   tasks:
 
     - name: add dynamic host
       add_host:
         name: "{{ host_name }}"
+        groups: this_hosts
 
 
+- name: doing the real thing
+  hosts: this_hosts
+
+  tasks:
     - name: restart spooler
       ansible.windows.win_service:
         name: spooler

@@ -3,6 +3,12 @@
   hosts: all
 
   tasks:
+
+    - name: add dynamic host
+      add_host:
+        name: {{ host_name }}
+
+
     - name: restart spooler
       ansible.windows.win_service:
         name: spooler

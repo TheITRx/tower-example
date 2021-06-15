@@ -3,12 +3,17 @@
   connection: local
 
   tasks:
+    - name: checking vars
+      ansible.builtin.debug:
+        msg: "{{ hostname }}"
 
     - name: add dynamic host
       add_host:
         name: "{{ host_name }}"
         groups:
         - this_hosts
+
+  
 
 
 - name: doing the real thing

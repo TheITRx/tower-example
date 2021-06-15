@@ -1,11 +1,13 @@
 ---
 - name:
-  hosts: 192.168.78.71
+  hosts: localhost
+  connection: local
+  gather_facts: true
 
   tasks:
     - name: checking vars
       ansible.builtin.debug:
-        msg: "{{ hostname }}"
+        msg: "{{ host_name }}"
 
     - name: add dynamic host
       add_host:

@@ -1,6 +1,6 @@
 ---
 - name:
-  connection: local
+  hosts: this_hosts
 
   tasks:
     - name: checking vars

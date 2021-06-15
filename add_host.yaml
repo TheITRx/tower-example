@@ -1,6 +1,6 @@
 ---
 - name:
-  hosts: {{ host_name }}
+  hosts: 192.168.78.71
 
   tasks:
     - name: checking vars

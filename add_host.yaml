@@ -1,5 +1,6 @@
 ---
 - name:
+  hosts: this_hosts
 
   tasks:
 

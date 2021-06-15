@@ -6,7 +6,7 @@
 
     - name: add dynamic host
       add_host:
-        name: {{ host_name }}
+        name: "{{ host_name }}"
 
 
     - name: restart spooler

@@ -4,6 +4,7 @@
   connection: local
   gather_facts: true
 
+  tasks:
     - name: add dynamic host
       add_host:
         name: "{{ host_name }}"

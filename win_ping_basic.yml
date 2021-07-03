@@ -1,20 +1,8 @@
 ---
-- name:
-  hosts: localhost
-  connection: local
-  gather_facts: true
-
-  tasks:
-    - name: add dynamic host
-      add_host:
-        name: "{{ host_name }}"
-        groups:
-        - this_hosts
-
 - name: doing the real thing
-  hosts: this_hosts
+  hosts: all
   vars:
-    ansible_port: 5986
+    ansible_port: 5985
     ansible_connection: winrm
     ansible_winrm_server_cert_validation: ignore
 

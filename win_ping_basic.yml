@@ -1,0 +1,23 @@
+---
+- name:
+  hosts: localhost
+  connection: local
+  gather_facts: true
+
+  tasks:
+    - name: add dynamic host
+      add_host:
+        name: "{{ host_name }}"
+        groups:
+        - this_hosts
+
+- name: doing the real thing
+  hosts: this_hosts
+  vars:
+    ansible_port: 5986
+    ansible_connection: winrm
+    ansible_winrm_server_cert_validation: ignore
+
+  tasks:
+  - name: Example from an Ansible Playbook
+    ansible.windows.win_ping:
